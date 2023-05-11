@@ -45,28 +45,14 @@ insert_permissions:
   role: user
 select_permissions:
 - permission:
-    allow_aggregations: true
     columns:
+    - id
+    - user_id
     - content
     - created_at
-    - id
     - updated_at
-    - user_id
     computed_fields:
     - my_vote_value
     - vote_total
     filter: {}
   role: anonymous
-- permission:
-    allow_aggregations: true
-    columns:
-    - content
-    - created_at
-    - id
-    - updated_at
-    - user_id
-    computed_fields:
-    - my_vote_value
-    - vote_total
-    filter: {}
-  role: user

@@ -1,24 +1,20 @@
 type Query {
-  session : SessionOutput
+  session: SessionOutput
 }
 
-
 type Mutation {
-  vote (
+  vote(
     post_id: Int!
     value: smallint!
   ): VoteOutput!
 }
 
-
-
-
 type SessionOutput {
-  user_id : Int
-  role : String
+  user_id: Int
+  role: String
 }
 
 type VoteOutput {
-  vote_id : Int!
+  vote_id: Int!
 }
 
